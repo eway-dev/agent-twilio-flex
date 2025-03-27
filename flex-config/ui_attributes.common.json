@@ -263,7 +263,7 @@
         "enable_audit_logging": true
       },
       "localization": {
-        "enabled": false,
+        "enabled": true,
         "show_menu": true
       },
       "park_interaction": {
@@ -405,15 +405,15 @@
         "enabled": true
       },
       "branding": {
-        "enabled": false,
-        "custom_logo_url": "",
-        "use_custom_colors": false,
+        "enabled": true,
+        "custom_logo_url": "https://esportesdasorte.bet.br/views/trader/esportesdasortevip/assets/images/logo.png",
+        "use_custom_colors": true,
         "custom_colors": {
-          "main_header_background": "rgb(6, 3, 58)",
+          "main_header_background": "#3511a2",
           "side_nav_background": "rgb(255, 255, 255)",
           "side_nav_border": "rgb(202, 205, 216)",
           "side_nav_icon": "rgb(18, 28, 45)",
-          "side_nav_selected_icon": "rgb(2, 99, 224)",
+          "side_nav_selected_icon": "#030049",
           "side_nav_hover_background": "rgb(225, 227, 234)"
         },
         "component_theme_overrides": {}
@@ -426,6 +426,12 @@
         "enabled": false,
         "exclude_attributes": [],
         "exclude_queues": []
+      },
+      "auto_close_tasks": {
+        "enabled": false
+      },
+      "send_message_after_accept_task": {
+        "enabled": false
       }
     }
   }
