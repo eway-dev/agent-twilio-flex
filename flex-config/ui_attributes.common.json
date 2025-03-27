@@ -428,10 +428,10 @@
         "exclude_queues": []
       },
       "auto_close_tasks": {
-        "enabled": false
+        "enabled": true
       },
       "send_message_after_accept_task": {
-        "enabled": false
+        "enabled": true
       }
     }
   }
