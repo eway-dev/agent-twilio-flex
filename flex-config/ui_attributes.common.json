@@ -163,20 +163,8 @@
         "enabled": true,
         "configuration": [
           {
-            "channel": "voice",
-            "auto_accept": false,
-            "auto_select": true,
-            "auto_wrapup": true,
-            "required_attributes": [],
-            "required_worker_attributes": [],
-            "wrapup_time": 30000,
-            "allow_extended_wrapup": false,
-            "extended_wrapup_time": 0,
-            "default_outcome": "Automatically completed"
-          },
-          {
             "channel": "chat",
-            "auto_accept": false,
+            "auto_accept": true,
             "auto_select": true,
             "auto_wrapup": true,
             "required_attributes": [],
