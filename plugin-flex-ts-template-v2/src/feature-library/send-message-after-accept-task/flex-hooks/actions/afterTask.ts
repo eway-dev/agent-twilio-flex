@@ -24,9 +24,11 @@ async function generateUserInfoMessage(task: Flex.ITask) {
   );
 }
 
-export const actionHook = function exampleCompleteTaskHook(flex: typeof Flex) {
-  flex.Actions.addListener(`${actionEvent}${actionName}`, async (payload) => {
-    await sendUserInfoMessage(payload.task);
+export const actionHook = function exampleAfterTaskHook(flex: typeof Flex) {
+  flex.Actions.addListener(`${actionEvent}${actionName}`, (payload) => {
+    setTimeout(async () => {
+      await sendUserInfoMessage(payload.task);
+    }, 3000);
   });
 };
 
