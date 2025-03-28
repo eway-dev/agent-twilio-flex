@@ -1,13 +1,13 @@
+import { Flex as FlexComponent } from '@twilio-paste/core/flex';
+import { Text } from '@twilio-paste/core/text';
 import * as Flex from '@twilio/flex-ui';
 import { ITask } from '@twilio/flex-ui';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { Flex as FlexComponent } from '@twilio-paste/core/flex';
-import { Text } from '@twilio-paste/core/text';
 
-import { getMatchingTaskConfiguration } from '../../config';
 import AppState from '../../../../types/manager/AppState';
 import { reduxNamespace } from '../../../../utils/state';
+import { getMatchingTaskConfiguration } from '../../config';
 import { ExtendedWrapupState } from '../../flex-hooks/states/extendedWrapupSlice';
 import { StringTemplates } from '../../flex-hooks/strings';
 

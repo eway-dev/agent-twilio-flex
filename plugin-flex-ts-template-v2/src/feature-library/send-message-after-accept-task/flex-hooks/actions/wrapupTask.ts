@@ -18,6 +18,11 @@ async function sendUserInfoMessage(task: Flex.ITask) {
       conversationSid: task.attributes.conversationSid,
     });
 
+    await Flex.Actions.invokeAction('SendMessage', {
+      body: `Antes de encerrar a conversa, avalie a qualidade da assistência que recebeu.`,
+      conversationSid: task.attributes.conversationSid,
+    });
+
     await Flex.Actions.invokeAction('CompleteTask', {
       sid: task.sid,
     });

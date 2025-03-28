@@ -15,9 +15,18 @@ export const eventHook = function checkTasksToClose(flex: typeof Flex) {
       const workerTasks = getAssignedTasks();
 
       for (const task of workerTasks) {
-        const lastMessageTimestamp = task.attributes?.lastMessage;
+        const conversationState = Flex.StateHelper.getConversationStateForTask(task);
+        if (!conversationState) return;
 
-        if (!lastMessageTimestamp) continue;
+        const conversationHelper = new Flex.ConversationHelper(conversationState);
+
+        const lastMessage = conversationHelper?.lastMessage;
+
+        if (!lastMessage.isFromMe) return;
+
+        const lastMessageTimestamp = lastMessage.source.timestamp;
+
+        if (!lastMessageTimestamp) return;
 
         const lastMessageTime = moment(lastMessageTimestamp);
         const currentTime = moment();

@@ -420,6 +420,9 @@
       },
       "send_message_after_accept_task": {
         "enabled": true
+      },
+      "user_task_canvas_header": {
+        "enabled": false
       }
     }
   }
